@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Navbar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade {
+      transition: opacity 0.8s ease-in-out;
+    }
+     
+  </style>
+</head>
+<body class="bg-[#1f242d]">
+
+  <!-- Navbar -->
+  
+  <header class=" top-0 z-40 bg-white/80 backdrop-blur-md border-b fixed w-full">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-4  ">
+          <a href="#home" class="text-2xl font-bold text-indigo-600">jp gallery</a>
+          <nav id="main-nav" class="hidden md:flex gap-4 items-center">
+            <a href="#home" data-link class="nav-link px-3 py-2 rounded-md">Home</a>
+            <a href="#product-section" data-link class="nav-link px-3 py-2 rounded-md">Products</a>
+            <a href="#review" data-link class="nav-link px-3 py-2 rounded-md">Reviews</a>
+            <a href="#contact" data-link class="nav-link px-3 py-2 rounded-md">Contact</a>
+          </nav>
+        </div>
+
+        
+
+          <div class="flex items-center gap-2">
+            <button id="cart-toggle" class="relative px-3 py-2 rounded-md bg-indigo-600 text-white">Cart <span id="cart-count" class="ml-2 inline-block bg-white/20 rounded-full px-2">0</span></button>
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden px-2 py-1 rounded-md bg-gray-100">Menu</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile nav -->
+    <div id="mobile-nav" class="md:hidden hidden border-t bg-white">
+      <div class="px-4 py-2 flex flex-col">
+        <a href="#home" data-link class="nav-link py-2">Home</a>
+        <a href="#products" data-link class="nav-link py-2">Products</a>
+        <a href="#reviews" data-link class="nav-link py-2">Reviews</a>
+        <a href="#contact" data-link class="nav-link py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+<section id="home" class="relative bg-[#1f242d]">
+    <div class="mx-auto max-w-7xl px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-12">
+      
+      <!-- Text Content -->
+      <div class="flex-1 text-center lg:text-left">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#fff] leading-tight">
+          Shop the Latest <span class="text-[#0ef] ">Trends</span> <br />
+          at the Best Prices
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
+          Discover exclusive collections, top deals, and fast delivery. Upgrade your lifestyle with our curated products.
+        </p>
+        <div class="mt-8 flex justify-center lg:justify-start gap-4">
+          <a href="#shop" 
+             class="px-6 py-3 bg-[#0ef] text-white font-medium rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-blue-700">
+            Shop Now
+          </a>
+          <a href="#categories" 
+             class="px-6 py-3 border border-gray-300 text-[#0ef] font-medium rounded-lg transition duration-300 ease-in-out hover:bg-gray-100">
+            Browse Categories
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="flex-1 flex justify-center lg:justify-end">
+        <img src="https://via.placeholder.com/500x400.png?text=E-commerce+Product" 
+             alt="Featured Product" 
+             class="rounded-2xl shadow-xl transition duration-300 ease-in-out hover:scale-105">
+      </div>
+    </div>
+  </section>
+
+<section id='banner'class="relative w-full h-[450px] md:h-[550px] overflow-hidden p-8 ">
+
+    <!-- Slides -->
+    <div class="relative w-full h-full ">
+      <!-- Slide 1 -->
+      <div class="absolute inset-0 opacity-100 fade slide active">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" 
+             class="w-full h-full object-cover" alt="Fashion Sale" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">Big Fashion Sale</h2>
+          <p class="text-lg md:text-2xl mb-6">Up to 50% off on all new arrivals!</p>
+          <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+            Shop Now
+          </a>
+        </div>
+        
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="absolute inset-0 opacity-0 fade slide">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f" 
+             class="w-full h-full object-cover" alt="Electronics Sale" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">Latest Electronics</h2>
+          <p class="text-lg md:text-2xl mb-6">Upgrade your lifestyle with smart gadgets!</p>
+          <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+            Explore Deals
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="absolute inset-0 opacity-0 fade slide">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+             class="w-full h-full object-cover" alt="Home Decor" />
+        <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">Stylish Home Decor</h2>
+          <p class="text-lg md:text-2xl mb-6">Transform your home with elegance and comfort.</p>
+          <a href="#" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+            Discover Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔸 Navigation Buttons -->
+    <button id="prev" 
+      class="absolute left-10 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
+      &#10094;
+    </button>
+    <button id="next" 
+      class="absolute right-10 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
+      &#10095;
+    </button>
+
+    <!-- 🔸 Dots Indicator -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-2">
+      <span class="dot w-3 h-3 bg-white rounded-full cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+      <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+    </div>
+  </section>
+
+   
+
+
+
+
+  <section id="product-section" class="mt-24 container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+    <!-- Products will be dynamically inserted here -->
+  </section>
+
+  
+  
+
+  <!-- 🔹 JavaScript for Sliding -->
+  <script>
+
+
+
+const productSection = document.getElementById("product-section");
+    const cartItems = document.getElementById("cart-items");
+    const totalAmount = document.getElementById("total-amount");
+    const emptyCart = document.getElementById("empty-cart");
+    const cartTotalNav = document.getElementById("cart-total");
+
+    let cart = [];
+
+    // 🧠 Fetch Products from FakeStore API
+    async function fetchProducts() {
+      const res = await fetch("https://fakestoreapi.com/products?limit=8");
+      const products = await res.json();
+      displayProducts(products);
+    }
+
+    // 💎 Display Products
+    function displayProducts(products) {
+      productSection.innerHTML = "";
+      products.forEach((p) => {
+        const card = document.createElement("div");
+        card.className =
+          "bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition p-4 flex flex-col";
+
+        card.innerHTML = `
+          <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-contain mb-3">
+          <h3 class="text-lg font-semibold mb-1">${p.title.slice(0, 25)}...</h3>
+          <p class="text-gray-600 mb-2">Price: <span class="font-medium">${p.price}</span> BDT</p>
+          <button class="add-cart bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+            Add to Cart
+          </button>
+        `;
+
+        const addBtn = card.querySelector(".add-cart");
+        addBtn.addEventListener("click", () => addToCart(p));
+
+        productSection.appendChild(card);
+      });
+    }
+
+    // 🛒 Add Product to Cart
+    function addToCart(product) {
+      const exists = cart.find((item) => item.id === product.id);
+      if (exists) {
+        alert("✅ Already in cart!");
+        return;
+      }
+
+      cart.push(product);
+      updateCartUI();
+    }
+
+    // ❌ Remove Product from Cart
+    function removeFromCart(id) {
+      cart = cart.filter((item) => item.id !== id);
+      updateCartUI();
+    }
+
+    // 🔄 Update Cart UI
+    function updateCartUI() {
+      cartItems.innerHTML = "";
+      let total = 0;
+
+      if (cart.length === 0) {
+        emptyCart.style.display = "block";
+        totalAmount.textContent = 0;
+        cartTotalNav.textContent = 0;
+        return;
+      }
+
+      emptyCart.style.display = "none";
+
+      cart.forEach((item) => {
+        total += item.price;
+
+        const li = document.createElement("li");
+        li.className =
+          "flex justify-between items-center bg-gray-100 p-3 rounded-md shadow-sm";
+
+        li.innerHTML = `
+          <span class="text-gray-700">${item.title.slice(0, 25)}...</span>
+          <div class="flex items-center space-x-3">
+            <span class="font-semibold">${item.price} BDT</span>
+            <button class="remove bg-red-500 text-white px-2 py-1 rounded">Remove</button>
+          </div>
+        `;
+
+        li.querySelector(".remove").addEventListener("click", () => removeFromCart(item.id));
+        cartItems.appendChild(li);
+      });
+
+      totalAmount.textContent = total.toFixed(2);
+      cartTotalNav.textContent = total.toFixed(2);
+    }
+
+    // 🚀 Start
+    fetchProducts();
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+<script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+    let timer;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('opacity-100', i === index);
+        slide.classList.toggle('opacity-0', i !== index);
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('bg-white', i === index);
+        dots[i].classList.toggle('bg-gray-400', i !== index);
+      });
+      current = index;
+    }
+
+    function nextSlide() {
+      showSlide((current + 1) % slides.length);
+    }
+
+    function prevSlide() {
+      showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    document.getElementById('next').addEventListener('click', nextSlide);
+    document.getElementById('prev').addEventListener('click', prevSlide);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showSlide(i));
+    });
+
+    function autoSlide() {
+      timer = setInterval(nextSlide, 4000);
+    }
+
+    autoSlide();
+  </script>
+
+
+
+
+      
+        <section id="review"class="py-16 px-6 md:px-20 bg-white">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold mb-3">What Our Customers Say</h2>
+      <p class="text-gray-600">Real feedback from our happy shoppers</p>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto">
+      <!-- Slides -->
+      <div class="review-slide fade opacity-100">
+        <div class="bg-gray-100 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="customer" class="w-24 h-24 rounded-full mb-4 border-4 border-white shadow">
+          <h3 class="text-xl font-semibold">Sophia Rahman</h3>
+          <p class="text-yellow-400 text-lg mt-1">★★★★★</p>
+          <p class="mt-4 text-gray-600 max-w-2xl">
+            “Amazing experience! The products were exactly as described, shipping was fast, and customer support was super friendly. Definitely shopping again!”
+          </p>
+        </div>
+      </div>
+
+      <div class="review-slide fade opacity-0 absolute inset-0">
+        <div class="bg-gray-100 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+          <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="customer" class="w-24 h-24 rounded-full mb-4 border-4 border-white shadow">
+          <h3 class="text-xl font-semibold">Arif Hossain</h3>
+          <p class="text-yellow-400 text-lg mt-1">★★★★★</p>
+          <p class="mt-4 text-gray-600 max-w-2xl">
+            “This is my favorite e-commerce store. The discounts are real, and the packaging was professional. Highly recommended for tech lovers!”
+          </p>
+        </div>
+      </div>
+
+      <div class="review-slide fade opacity-0 absolute inset-0">
+        <div class="bg-gray-100 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+          <img src="https://randomuser.me/api/portraits/women/70.jpg" alt="customer" class="w-24 h-24 rounded-full mb-4 border-4 border-white shadow">
+          <h3 class="text-xl font-semibold">Mina Chowdhury</h3>
+          <p class="text-yellow-400 text-lg mt-1">★★★★☆</p>
+          <p class="mt-4 text-gray-600 max-w-2xl">
+            “Great quality products at affordable prices! Delivery took a bit longer than expected but overall I’m very happy with my purchase.”
+          </p>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="prev" 
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
+        &#10094;
+      </button>
+      <button id="next" 
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full">
+        &#10095;
+      </button>
+
+      <!-- Dots -->
+      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+        <span class="dot w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+      </div>
+    </div>
+  </section>
+
+     
+<section id="contact" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+
+      <!-- Heading -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Contact Us</h2>
+        <p class="text-gray-600 mt-2 text-base md:text-lg">We’d love to hear from you. Get in touch with us today.</p>
+      </div>
+
+      <!-- Grid layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Left: Contact Info -->
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700">📍 Our Office</h3>
+            <p class="text-gray-600 mt-1 text-sm md:text-base">123 Market Road, Chittagong, Bangladesh</p>
+          </div>
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700">📞 Phone</h3>
+            <p class="text-gray-600 mt-1 text-sm md:text-base">+880 1630204699</p>
+          </div>
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold text-gray-700">✉️ Email</h3>
+            <p class="text-gray-600 mt-1 text-sm md:text-base">shahadathh07@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-lg">
+          <form action="#" method="POST" class="space-y-5">
+
+            <div>
+              <label for="name" class="block text-gray-700 font-medium">Your Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full mt-1 px-4 py-2 border rounded-lg text-sm md:text-base focus:ring-2 focus:ring-teal-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="email" class="block text-gray-700 font-medium">Your Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full mt-1 px-4 py-2 border rounded-lg text-sm md:text-base focus:ring-2 focus:ring-teal-500 focus:outline-none">
+            </div>
+
+            <div>
+              <label for="message" class="block text-gray-700 font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" required
+                class="w-full mt-1 px-4 py-2 border rounded-lg text-sm md:text-base focus:ring-2 focus:ring-teal-500 focus:outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-teal-600 text-white font-semibold py-2 rounded-lg hover:bg-teal-700 transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
